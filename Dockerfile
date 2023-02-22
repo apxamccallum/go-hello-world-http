@@ -8,6 +8,8 @@ RUN go build -o /go/bin/app -v ./...
 
 #final stage
 FROM alpine:latest
+ARG WEBBODY
+ENV WEBBODY='Default Environment Varable'
 RUN apk --no-cache add ca-certificates
 COPY --from=builder /go/bin/app /app
 ENTRYPOINT /app
