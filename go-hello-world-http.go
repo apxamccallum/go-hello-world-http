@@ -3,10 +3,12 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 )
 
 func HelloWorld(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, world!\n")
+	body := os.Getenv("WEBBODY")
+	fmt.Fprint(w, body)
 }
 
 func main() {
