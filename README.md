@@ -12,7 +12,6 @@ To build the server with Docker, run the following command:
 ```
 docker build -t go-hello-world-http ./cmd/helloworld/
 ```
-This will create a Docker image with the name `go-hello-world-http`.
 
 ## Run with Docker
 To run the server with Docker, use the following command:
